@@ -1,22 +1,17 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Contact
+      View Products
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-list-header>
+    <ion-item *ngFor="let product of products">
       <ion-label>
-        Follow us on Twitter
-      </ion-label>
-    </ion-list-header>
-    <ion-item>
-      <ion-label>
-        <ion-icon name="logo-ionic" slot="start"></ion-icon>
-        @ionicframework
+        <h1>{{product.name}}</h1>
+        <p>{{product.detail}}</p>
       </ion-label>
     </ion-item>
   </ion-list>

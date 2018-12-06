@@ -1,7 +1,26 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>About</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>Add Product</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content padding>
+  <ion-list>
+    <form (ngSubmit)="productForm()">
+      <ion-item>
+        <ion-input type="text" placeholder="Enter Product Name" [(ngModel)]="name" name="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-textarea placeholder="Enter Product Detail" [(ngModel)]="detail" name="detail"></ion-textarea>
+      </ion-item>
+
+
+      <ion-button type="submit" size="full">Add Product</ion-button>
+    </form>
+    <ion-item>
+      <div>
+        <h1>{{products}}</h1>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>
